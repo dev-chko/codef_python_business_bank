@@ -33,7 +33,7 @@ codef_python_수시입출금 API 사용
 
 ## 진행 순서
 <br>
-1. connectinfo_sample.py참고하여 connectinfo.py 생성
-2. python3 run.py 실행
+1. connectinfo_sample.py참고하여 connectinfo.py 생성<br>
+2. python3 run.py 실행<br>
 <br>
 <br>
