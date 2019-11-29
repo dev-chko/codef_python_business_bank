@@ -28,8 +28,8 @@ codef_python_수시입출금 API 사용
 
 
 ## crontab 설정
-`crontab -e`
-`*/10 * * * * /usr/bin/python3.5 /home/ubuntu/codef_python_transaction/run.py`
+`crontab -e`<br>
+`*/10 * * * * /usr/bin/python3.5 /home/ubuntu/codef_python_transaction/run.py`<br>
 
 ## 진행 순서
 <br>
