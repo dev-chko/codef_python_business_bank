@@ -5,7 +5,7 @@ codef_python_수시입출금 API 사용
 ## 환경구성<br> 
 1.ubuntu 16.04LTS<br>
 2.Python -v 3.5.2<br>
-3.pip -v 19.3.1 <br>
+3.pip -v 19.3.1 <br><br><br>
 
 ## 의존성<br><br>
 `pip install requests`<br>
