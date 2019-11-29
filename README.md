@@ -26,6 +26,11 @@ codef_python_수시입출금 API 사용
 잔액	BIGINT	resBalance	resAccountTranBalance	NOT NULL<br>
 확인  INT   enable_system NOT NULL default '0'
 
+
+## crontab 설정
+`crontab -e`
+`*/10 * * * * /usr/bin/python3.5 /home/ubuntu/codef_python_transaction/run.py`
+
 ## 진행 순서
 <br>
 1. connectinfo_sample.py참고하여 connectinfo.py 생성
