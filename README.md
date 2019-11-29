@@ -24,6 +24,7 @@ codef_python_수시입출금 API 사용
 표기	varchar(45)	resType	resAccountDesc3	NOT NULL<br>
 시간	BIGINT	resTime	YYYYMMDDHHmm(resAccountTrDate + resAccountTrtime[:4])	NOT NULL<br>
 잔액	BIGINT	resBalance	resAccountTranBalance	NOT NULL<br>
+확인  INT   enable_system NOT NULL default '0'
 
 ## 진행 순서
 <br>
