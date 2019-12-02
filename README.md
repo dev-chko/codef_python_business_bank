@@ -8,9 +8,11 @@ codef_python_수시입출금 API 사용
 3.pip -v 19.3.1 <br><br><br>
 
 ## 의존성<br><br>
-`pip install requests`<br>
-`pip install pycrypto`<br>
-`pip install pytz`<br>
+~~~
+pip install requests
+pip install pycrypto
+pip install pytz
+~~~
 <br>
 <br>
 <br>
@@ -24,8 +26,21 @@ codef_python_수시입출금 API 사용
 표기	varchar(45)	resType	resAccountDesc3	NOT NULL<br>
 시간	BIGINT	resTime	YYYYMMDDHHmm(resAccountTrDate + resAccountTrtime[:4])	NOT NULL<br>
 잔액	BIGINT	resBalance	resAccountTranBalance	NOT NULL<br>
-확인  INT   enable_system NOT NULL default '0'
+확인  INT   enable_system NOT NULL default '0'<br>
+<br>
+## derFile, keyFile 생성방법
+~~~
+import base64
+der_f = open('signCert.der', 'rb')
+der_b = der_f.read()
+derFile = str(base64.b64encode(der_b))[2:-1]
+der_f.close()
+key_f = open('signPri.key', 'rb')
+key_b = key_f.read()
+keyFile =  str(base64.b64encode(key_b))[2:-1]
+key_f.close()
 
+~~~
 
 ## crontab 설정
 `crontab -e`<br>
