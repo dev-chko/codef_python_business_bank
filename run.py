@@ -1,3 +1,6 @@
+import os
+#실행 dir 설정
+os.chdir('/home/ubuntu/codef_python_transaction/')
 from codef_function import *
 from datetime import datetime
 from db_utils import *
