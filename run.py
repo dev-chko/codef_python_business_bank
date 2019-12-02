@@ -15,7 +15,6 @@ with open('connectinfo.py','r')as f:
     keyFile = f.readline().splitlines()[0]
 
 token_f = open('token.txt' ,'r')
-token_f = open('token.txt' ,'r')
 try:
     token = token_f.read().splitlines()[0]
 except:
