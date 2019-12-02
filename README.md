@@ -40,7 +40,8 @@ key_f.close()
 ```
 ## crontab 설정
 `crontab -e`<br>
-`*/10 * * * * /usr/bin/python3.5 /home/ubuntu/codef_python_transaction/run.py`<br>
+`*/5 * * * * /usr/bin/python3.5 /home/ubuntu/codef_python_transaction/run.py`<br>
+`#5분에 한번씩 실행`
 
 ## 진행 순서
 <br>
