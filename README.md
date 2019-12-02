@@ -1,4 +1,4 @@
-# codef_python_transaction
+```# codef_python_transaction
 codef_python_수시입출금 API 사용
 
 <br>
@@ -8,11 +8,9 @@ codef_python_수시입출금 API 사용
 3.pip -v 19.3.1 <br><br><br>
 
 ## 의존성<br><br>
-~~~
 pip install requests
 pip install pycrypto
 pip install pytz
-~~~
 <br>
 <br>
 <br>
@@ -29,7 +27,6 @@ pip install pytz
 확인  INT   enable_system NOT NULL default '0'<br>
 <br>
 ## derFile, keyFile 생성방법
-~~~
 import base64
 der_f = open('signCert.der', 'rb')
 der_b = der_f.read()
@@ -40,7 +37,6 @@ key_b = key_f.read()
 keyFile =  str(base64.b64encode(key_b))[2:-1]
 key_f.close()
 
-~~~
 
 ## crontab 설정
 `crontab -e`<br>
@@ -52,3 +48,4 @@ key_f.close()
 2. python3 run.py 실행<br>
 <br>
 <br>
+```
