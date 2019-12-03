@@ -67,7 +67,7 @@ else:
 
 
 origin_tx = json.loads(urllib.parse.unquote_plus(tx_response.text))['data']['resTrHistoryList']
-for i in range(0,len(origin_tx)-1):
+for i in range(0,len(origin_tx)):
     hist_json= origin_tx[i]
     for key, val in hist_json.items():
         globals()[key] = "{value}".format(value=val)
