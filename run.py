@@ -31,7 +31,7 @@ if __name__ == "__main__":
 today = KST.strftime(codef_fmt)
 token_url = 'https://oauth.codef.io/oauth/token'
 
-tx_url = 'https://development.codef.io/v1/kr/bank/b/account/transaction-list'
+tx_url = 'https://api.codef.io/v1/kr/bank/b/account/transaction-list'
 
 tx_body = {
     "connectedId": connected_id,
