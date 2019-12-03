@@ -39,7 +39,7 @@ tx_body = {
     "account": '47707448704011',
     "startDate": today,
     "endDate": today,
-    "orderBy": "0",
+    "orderBy": "1",
     "inquiryType": "1"
 }
 
