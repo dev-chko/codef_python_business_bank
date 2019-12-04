@@ -19,17 +19,11 @@ def db_query(db, sql, params):
         conn.commit()
     finally:
         conn.close()
-#
-#def insert_trnasaction(email, password): 
-#    sql = 'INSERT INTO trans_info (resut, data) VALUES (%s, %s)' 
-#    params = (email, password) 
-#    db_query(db='codef_db', sql=sql, params=params)
+
 
 def insert_transaction(data1, data2, data3 ,data4, data5):
-#def insert_trnasaction(data1,data2):
     sql = 'INSERT INTO transaction(commEndDate, commStartDate, resAccountBalance, resWithdrawalAmt, resTrHistoryList) VALUES (%s, %s, %s, %s, %s)'
     params = (data1, data2, data3, data4, data5)
-#    params = (data1,data2)
     db_query(db='codef_db', sql=sql, params=params)
 
 
