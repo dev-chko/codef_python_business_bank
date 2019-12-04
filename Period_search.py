@@ -32,13 +32,16 @@ today = KST.strftime(codef_fmt)
 token_url = 'https://oauth.codef.io/oauth/token'
 
 tx_url = 'https://api.codef.io/v1/kr/bank/b/account/transaction-list'
+start_date= str(input("시작일자를 입력하시오.(ex: 20190210): "))
+end_date= str(input("검색종료일자를 입력하시오.(ex: 20190217): "))
+
 
 tx_body = {
     "connectedId": connected_id,
     "organization": "0003",
     "account": '47707448704011',
-    "startDate": today,
-    "endDate": today,
+    "startDate": start_date,
+    "endDate": end_date,
     "orderBy": "1",
     "inquiryType": "1"
 }
@@ -78,11 +81,11 @@ for i in range(0,len(origin_tx)):
     else:
         count_date +=1
     serialNumber = resAccountTrDate + str(count_date).zfill(5)
-    resTime = resAccountTrDate + resAccountTrTime[:4]
+    resTime = resAccountTrDate + resAccountTrTime[:4]   
+    print(serialNumber, resAccountIn, resAccountDesc1, resAccountDesc2, resAccountDesc3, resTime, resAfterTranBalance)
     try:
         insert_db(serialNumber, resAccountIn, resAccountDesc1, resAccountDesc2, resAccountDesc3, resTime, resAfterTranBalance)
     except pymysql.err.IntegrityError:
         pass
     except:
         print("이건 모르겠당")
-
