@@ -2,9 +2,8 @@ import os
 #실행 dir 설정
 os.chdir('/home/ubuntu/codef_python_transaction/')
 from codef_function import *
-from datetime import datetime
 from db_utils import *
-from pytz import timezone
+
 
 with open('connectinfo.py','r')as f:
     client_id = f.readline().splitlines()[0]
@@ -22,13 +21,6 @@ except:
 finally:
     token_f.close()
 
-if __name__ == "__main__":
-    fmt = "%Y-%m-%d %H:%M:%S %Z%z"
-    codef_fmt = '%Y%m%d'
-    UTC = datetime.now(timezone('UTC'))
-    KST = datetime.now(timezone('Asia/Seoul'))
-
-today = KST.strftime(codef_fmt)
 token_url = 'https://oauth.codef.io/oauth/token'
 
 tx_url = 'https://api.codef.io/v1/kr/bank/b/account/transaction-list'
