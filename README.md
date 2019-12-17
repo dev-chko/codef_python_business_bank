@@ -9,8 +9,9 @@ codef_python_수시입출금 API 사용
 
 ## 의존성<br><br>
 `pip install requests`<br>
-`pip install pycrypto`<br>
-`pip install pytz`<br>
+`pip install pycrypto --user`<br>
+`pip install pytz --user`<br>
+`pip install pymysql --user'<br>
 <br>
 <br>
 <br>
