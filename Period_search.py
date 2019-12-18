@@ -62,6 +62,7 @@ else:
 
 
 date_compare = ''
+resCheckInOut = ''
 origin_tx = json.loads(urllib.parse.unquote_plus(tx_response.text))['data']['resTrHistoryList']
 for i in range(0,len(origin_tx)):
     hist_json= origin_tx[i]
@@ -72,11 +73,16 @@ for i in range(0,len(origin_tx)):
         date_compare = resAccountTrDate
     else:
         count_date +=1
+    if resAccountIn == "0":
+        resCheckInOut = "1"
+    elif resAccountOut == "0":
+        resCheckInOut = '0'
     serialNumber = resAccountTrDate + str(count_date).zfill(5)
     resTime = resAccountTrDate + resAccountTrTime[:4]   
-    print(serialNumber, resAccountIn, resAccountDesc1, resAccountDesc2, resAccountDesc3, resTime, resAfterTranBalance)
+    print(serialNumber, resAccountIn, resCheckInOut, resAccountDesc1, resAccountDesc2, resAccountDesc3, resTime, resAfterTranBalance, resCheckInOut)
+    type(resAccountIn)
     try:
-        insert_db(serialNumber, resAccountIn, resAccountDesc1, resAccountDesc2, resAccountDesc3, resTime, resAfterTranBalance)
+        insert_db(serialNumber, resAccountIn, resAccountOut, resAccountDesc1, resAccountDesc2, resAccountDesc3, resTime, resAfterTranBalance, resCheckInOut)
     except pymysql.err.IntegrityError:
         pass
     except:

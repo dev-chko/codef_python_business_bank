@@ -22,14 +22,14 @@ def db_query(db, sql, params):
 
 
 def insert_transaction(data1, data2, data3 ,data4, data5):
-    sql = 'INSERT INTO transaction(commEndDate, commStartDate, resAccountBalance, resWithdrawalAmt, resTrHistoryList) VALUES (%s, %s, %s, %s, %s)'
+    sql = 'INSERT INTO transaction(commEndDate, commStartDate, resAccountBalance, resWithdrawalAmt, resTrHistoryList) VALUES (%s, %s, %s, %s, %s, %s)'
     params = (data1, data2, data3, data4, data5)
     db_query(db='codef_db', sql=sql, params=params)
 
 
-def insert_db(data1, data2, data3 ,data4, data5, data6, data7):
-    sql = 'INSERT INTO codef_Transaction(serialNumber, resAccountIn, resName, resTraType, resType, resTime, resBalance) VALUES (%s, %s, %s, %s, %s, %s, %s)'
-    params = (data1, data2, data3, data4, data5, data6, data7)
+def insert_db(data1, data2, data3 ,data4, data5, data6, data7, data8, data9):
+    sql = 'INSERT INTO codef_Transaction(serialNumber, resAccountIn, resAccountOut, resName, resTraType, resType, resTime, resBalance, resCheckInOut) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)'
+    params = (data1, data2, data3, data4, data5, data6, data7, data8, data9)
     db_query(db='codef_db', sql=sql, params=params)
 
 
