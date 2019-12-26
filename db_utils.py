@@ -3,7 +3,7 @@ import pymysql
 def db_query(db, sql, params):
     # Connect to MySQL
     conn = pymysql.connect(
-        host='codefrds.ckfb5jjpo5r8.ap-northeast-2.rds.amazonaws.com',
+        host='do-not-deletion-codefrds.ckfb5jjpo5r8.ap-northeast-2.rds.amazonaws.com',
         user='admin',
         password='zhem2019!',
         charset='utf8',
