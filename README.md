@@ -11,7 +11,7 @@ codef_python_수시입출금 API 사용
 `pip install requests`<br>
 `pip install pycrypto --user`<br>
 `pip install pytz --user`<br>
-`pip install pymysql --user'<br>
+`pip install pymysql --user`
 <br>
 <br>
 <br>
