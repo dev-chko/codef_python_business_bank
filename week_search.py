@@ -39,7 +39,7 @@ tx_body = {
     "connectedId": connected_id,
     "organization": "0003",
     "account": '47707448704011',
-    "startDate": today,
+    "startDate": ago_week,
     "endDate": today,
     "orderBy": "1",
     "inquiryType": "1"
